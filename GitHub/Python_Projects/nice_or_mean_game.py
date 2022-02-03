@@ -34,15 +34,11 @@ def nice_mean(nice, mean, name):
     while stop:
         show_score(nice, mean, name)
         pick = input("\nA stranger approaches you for a \n conversation. Will you be nice \nor mean? (N/M) \n>>>: ").lower()
-        if pick != "n":
-            print(pick)
-            print('please input either an n or an m')
-            nice_mean(nice, mean, name)
-        elif pick == "n":
+        if pick == "n":
             print('the stanger leaves smiling...')
             nice = (nice + 1)
             stop = False
-        elif pick == "m":
+        if pick == "m":
             print("\nThe stranger glares menacingly and walks away...")
             mean = (mean + 1)
             stop = False
