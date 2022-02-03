@@ -1,4 +1,4 @@
-import app
+import pythonBasics.app as app
 
 def print_app2():
     name = (__name__)
