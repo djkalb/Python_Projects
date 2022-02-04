@@ -20,15 +20,20 @@ class User:
 new_user = User("james", "j@g.com", 'password', 1234)
 
 class Employee(User):
-    def __init__(self, pay, title):
+    def __init__(self, pay, title, hours):
         self.pay = pay
         self.title = title
+        self.hours = hours
+
+    def overtimeCalc (self):
+            if self.hours > 40:
+                return ("Your new pay rate is {} keep working more hours".format(self.pay * 1.5))
 class Admin(User):
     def __init__(self, privelidges, auth):
         self.privelidges = privelidges
         self.auth = auth
 new_admin = Admin("all", "none")
-new_Employee = Employee(6.00, "help")
+new_Employee = Employee(6.00, "help", 41)
 
-print(new_Employee.title)
-
+new_Employee.name = 'umm'
+print(new_Employee.overtimeCalc())
