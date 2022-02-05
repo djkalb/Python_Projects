@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Parent:
+class Parent(ABC):
     
         
         
